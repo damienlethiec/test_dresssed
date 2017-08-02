@@ -5,7 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+source "https://dresssed.com/gems/#{ENV['DRESSED_KEY']}/" do
+  gem "dresssed-ives", "~> 1.0.54"
+end
+gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use postgresql as the database for Active Record
